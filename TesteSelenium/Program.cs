@@ -14,6 +14,7 @@ namespace TesteSelenium
 
             var firefoxOptions = new ChromeOptions();
             firefoxOptions.AddArgument("--headless");
+            firefoxOptions.AddArgument("--silent");
 
             ChromeDriver driver;
 
