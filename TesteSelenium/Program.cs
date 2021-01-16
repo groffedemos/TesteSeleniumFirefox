@@ -30,7 +30,7 @@ namespace TesteSelenium
             //driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(60);
 
             var siteTestes = Environment.GetEnvironmentVariable("SiteTestes");
-            driver.Navigate().GoToUrl("https://www.uol.com.br");
+            driver.Navigate().GoToUrl("https://github.com");
 
             System.Threading.Thread.Sleep(3000);
             
