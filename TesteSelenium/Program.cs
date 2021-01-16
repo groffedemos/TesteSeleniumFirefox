@@ -14,7 +14,7 @@ namespace TesteSelenium
 
             var options = new ChromeOptions();
             options.AddArgument("--headless");
-            options.LogLevel = FirefoxDriverLogLevel.Info;
+            options.LogLevel = ChromeDriverLogLevel.Info;
             options.UnhandledPromptBehavior = UnhandledPromptBehavior.Dismiss;
 
             ChromeDriver driver;
