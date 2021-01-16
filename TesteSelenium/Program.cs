@@ -12,16 +12,16 @@ namespace TesteSelenium
         {
             Console.WriteLine("Testando o uso de Selenium..");
 
-            var firefoxOptions = new FirefoxOptions();
+            var firefoxOptions = new ChromeOptions();
             firefoxOptions.AddArgument("--headless");
 
-            FirefoxDriver driver;
+            ChromeDriver driver;
 
             //if (Environment.OSVersion.VersionString.ToLower().Contains("windows"))
             //    driver = new FirefoxDriver("D:\\Selenium\\Firefox\\", firefoxOptions);
                 //driver = new FirefoxDriver(firefoxOptions);
             //else
-                driver = new FirefoxDriver(firefoxOptions);
+                driver = new ChromeDriver(firefoxOptions);
 
 
             var siteTestes = Environment.GetEnvironmentVariable("SiteTestes");
