@@ -21,7 +21,7 @@ namespace TesteSelenium
             //    driver = new FirefoxDriver("D:\\Selenium\\Firefox\\", firefoxOptions);
                 //driver = new FirefoxDriver(firefoxOptions);
             //else
-            //    driver = new FirefoxDriver(firefoxOptions);
+                driver = new FirefoxDriver(firefoxOptions);
 
 
             var siteTestes = Environment.GetEnvironmentVariable("SiteTestes");
