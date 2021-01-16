@@ -17,15 +17,15 @@ namespace TesteSelenium
 
             FirefoxDriver driver;
 
-            if (Environment.OSVersion.VersionString.ToLower().Contains("windows"))
-                driver = new FirefoxDriver("D:\\Selenium\\Firefox\\", firefoxOptions);
+            //if (Environment.OSVersion.VersionString.ToLower().Contains("windows"))
+            //    driver = new FirefoxDriver("D:\\Selenium\\Firefox\\", firefoxOptions);
                 //driver = new FirefoxDriver(firefoxOptions);
-            else
-                driver = new FirefoxDriver(firefoxOptions);
+            //else
+            //    driver = new FirefoxDriver(firefoxOptions);
 
 
             var siteTestes = Environment.GetEnvironmentVariable("SiteTestes");
-            driver.Navigate().GoToUrl("https://github.com/");
+            driver.Navigate().GoToUrl("https://anp-imagemnasa.azurewebsites.net/");
 
             System.Threading.Thread.Sleep(3000);
 
