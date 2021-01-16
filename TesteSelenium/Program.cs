@@ -26,11 +26,11 @@ namespace TesteSelenium
                 driver = new FirefoxDriver(firefoxOptions);
 
             driver.Manage().Timeouts().PageLoad = TimeSpan.FromSeconds(30);
-            driver.Manage().Timeouts().AsynchronousJavaScript = TimeSpan.FromSeconds(30);
+            //driver.Manage().Timeouts().AsynchronousJavaScript = TimeSpan.FromSeconds(30);
             //driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(60);
 
             var siteTestes = Environment.GetEnvironmentVariable("SiteTestes");
-            driver.Navigate().GoToUrl("https://anp-imagemnasa.azurewebsites.net/");
+            driver.Navigate().GoToUrl("https://www.uol.com.br");
 
             System.Threading.Thread.Sleep(3000);
             
