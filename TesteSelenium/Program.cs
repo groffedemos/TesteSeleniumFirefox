@@ -25,11 +25,14 @@ namespace TesteSelenium
             else
                 driver = new FirefoxDriver(firefoxOptions);
 
+            driver.Manage().Timeouts().PageLoad = TimeSpan.FromSeconds(30);
 
             var siteTestes = Environment.GetEnvironmentVariable("SiteTestes");
             driver.Navigate().GoToUrl("https://anp-imagemnasa.azurewebsites.net/");
 
             System.Threading.Thread.Sleep(3000);
+            
+
 
             Console.WriteLine($"Resultado: {driver.Title}");
 
