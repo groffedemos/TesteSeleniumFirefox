@@ -12,18 +12,18 @@ namespace TesteSelenium
         {
             Console.WriteLine("Testando o uso de Selenium..");
 
-            var options = new ChromeOptions();
+            var options = new FirefoxOptions();
             options.AddArgument("--headless");
-            options.LogLevel = ChromeDriverLogLevel.Info;
+            options.LogLevel = FirefoxDriverLogLevel.Info;
             options.UnhandledPromptBehavior = UnhandledPromptBehavior.Dismiss;
 
-            ChromeDriver driver;
+            FirefoxDriver driver;
 
             if (Environment.OSVersion.VersionString.ToLower().Contains("windows"))
-                driver = new ChromeDriver("D:\\Selenium\\Firefox\\", options);
+                driver = new FirefoxDriver("D:\\Selenium\\Firefox\\", options);
                 //driver = new FirefoxDriver(firefoxOptions);
             else
-                driver = new ChromeDriver(options);
+                driver = new FirefoxDriver(options);
 
             driver.Manage().Timeouts().PageLoad = TimeSpan.FromSeconds(30);
             driver.Manage().Timeouts().AsynchronousJavaScript = TimeSpan.FromSeconds(30);
