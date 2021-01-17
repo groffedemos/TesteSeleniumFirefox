@@ -34,7 +34,7 @@ namespace TesteSelenium
                 driver = new FirefoxDriver(options);
 
             driver.Manage().Timeouts().PageLoad = TimeSpan.FromSeconds(30);
-            //driver.Manage().Timeouts().AsynchronousJavaScript = TimeSpan.FromSeconds(30);
+            driver.Manage().Timeouts().AsynchronousJavaScript = TimeSpan.FromSeconds(30);
             //driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(60);
 
             var siteTestes = Environment.GetEnvironmentVariable("SiteTestes");
