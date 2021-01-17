@@ -18,7 +18,7 @@ namespace TesteSelenium
             options.LogLevel = FirefoxDriverLogLevel.Fatal;
             //options.UnhandledPromptBehavior = UnhandledPromptBehavior.Dismiss;
 
-            FirefoxDriverService service = FirefoxDriverService.CreateDefaultService(Directory.GetCurrentDirectory());
+            FirefoxDriverService service = FirefoxDriverService.CreateDefaultService();
             service.HideCommandPromptWindow = true;
             
             FirefoxDriver driver;
