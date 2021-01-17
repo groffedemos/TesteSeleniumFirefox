@@ -13,7 +13,7 @@ namespace TesteSelenium
             Console.WriteLine("Testando o uso de Selenium..");
 
             var options = new FirefoxOptions();
-            //options.AddArgument("--headless");
+            options.AddArgument("--headless");
             //options.LogLevel = FirefoxDriverLogLevel.Info;
             //options.UnhandledPromptBehavior = UnhandledPromptBehavior.Dismiss;
 
