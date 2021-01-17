@@ -16,14 +16,14 @@ namespace TesteSelenium
             options.AddArgument("--headless");
             //options.LogLevel = FirefoxDriverLogLevel.Info;
             options.LogLevel = FirefoxDriverLogLevel.Error;
-            //options.UnhandledPromptBehavior = UnhandledPromptBehavior.Dismiss;
+            options.UnhandledPromptBehavior = UnhandledPromptBehavior.Dismiss;
             
             FirefoxProfile profile = new FirefoxProfile();
             profile.SetPreference("webdriver.log.browser.ignore", true);
             profile.SetPreference("webdriver.log.driver.ignore", true);
             profile.SetPreference("webdriver.log.profiler.ignore", true);
 
-            //options.Profile = profile;
+            options.Profile = profile;
             
             FirefoxDriver driver;
 
