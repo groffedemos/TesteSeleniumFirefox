@@ -18,12 +18,18 @@ namespace TesteSelenium
             //options.LogLevel = FirefoxDriverLogLevel.Error;
             //options.UnhandledPromptBehavior = UnhandledPromptBehavior.Dismiss;
             
-            FirefoxProfile profile = new FirefoxProfile();
+            firefoxOptions.SetLoggingPreference(LogType.Browser, LogLevel.Off);
+            firefoxOptions.SetLoggingPreference(LogType.Client, LogLevel.Off);
+            firefoxOptions.SetLoggingPreference(LogType.Driver, LogLevel.Off);
+            firefoxOptions.SetLoggingPreference(LogType.Profiler, LogLevel.Off);
+            firefoxOptions.SetLoggingPreference(LogType.Server, LogLevel.Off);
+            
+            /*FirefoxProfile profile = new FirefoxProfile();
             profile.SetPreference("webdriver.log.browser.ignore", true);
             profile.SetPreference("webdriver.log.driver.ignore", true);
             profile.SetPreference("webdriver.log.profiler.ignore", true);
 
-            options.Profile = profile;
+            options.Profile = profile;*/
             
             FirefoxDriver driver;
 
