@@ -18,13 +18,16 @@ namespace TesteSelenium
             options.LogLevel = FirefoxDriverLogLevel.Fatal;
             //options.UnhandledPromptBehavior = UnhandledPromptBehavior.Dismiss;
 
+            FirefoxDriverService service = FirefoxDriverService.CreateDefaultService(Directory.GetCurrentDirectory());
+            service.HideCommandPromptWindow = true;
+            
             FirefoxDriver driver;
 
             if (Environment.OSVersion.VersionString.ToLower().Contains("windows"))
                 driver = new FirefoxDriver("D:\\Selenium\\Firefox\\", options);
                 //driver = new FirefoxDriver(firefoxOptions);
             else
-                driver = new FirefoxDriver(options);
+                driver = new FirefoxDriver(service, options);
 
             driver.Manage().Timeouts().PageLoad = TimeSpan.FromSeconds(30);
             //driver.Manage().Timeouts().AsynchronousJavaScript = TimeSpan.FromSeconds(30);
