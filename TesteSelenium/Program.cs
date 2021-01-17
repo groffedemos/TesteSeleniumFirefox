@@ -15,7 +15,7 @@ namespace TesteSelenium
             var options = new FirefoxOptions();
             options.AddArgument("--headless");
             //options.LogLevel = FirefoxDriverLogLevel.Info;
-            options.LogLevel = FirefoxDriverLogLevel.Info;
+            options.LogLevel = FirefoxDriverLogLevel.Error;
             //options.UnhandledPromptBehavior = UnhandledPromptBehavior.Dismiss;
             
             FirefoxProfile profile = new FirefoxProfile();
