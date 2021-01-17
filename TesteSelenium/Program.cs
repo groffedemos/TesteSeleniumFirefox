@@ -17,9 +17,13 @@ namespace TesteSelenium
             //options.LogLevel = FirefoxDriverLogLevel.Info;
             options.LogLevel = FirefoxDriverLogLevel.Fatal;
             //options.UnhandledPromptBehavior = UnhandledPromptBehavior.Dismiss;
+            
+            FirefoxProfile profile = new FirefoxProfile();
+            profile.SetPreference("webdriver.log.browser.ignore", true);
+            profile.SetPreference("webdriver.log.driver.ignore", true);
+            profile.SetPreference("webdriver.log.profiler.ignore", true);
 
-            FirefoxDriverService service = FirefoxDriverService.CreateDefaultService();
-            service.HideCommandPromptWindow = true;
+            options.Profile = profile;
             
             FirefoxDriver driver;
 
@@ -27,7 +31,7 @@ namespace TesteSelenium
                 driver = new FirefoxDriver("D:\\Selenium\\Firefox\\", options);
                 //driver = new FirefoxDriver(firefoxOptions);
             else
-                driver = new FirefoxDriver(service, options);
+                driver = new FirefoxDriver(options);
 
             driver.Manage().Timeouts().PageLoad = TimeSpan.FromSeconds(30);
             //driver.Manage().Timeouts().AsynchronousJavaScript = TimeSpan.FromSeconds(30);
