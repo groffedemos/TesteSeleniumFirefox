@@ -23,7 +23,7 @@ namespace TesteSelenium
             profile.SetPreference("webdriver.log.driver.ignore", true);
             profile.SetPreference("webdriver.log.profiler.ignore", true);
 
-            options.Profile = profile;
+            //options.Profile = profile;
             
             FirefoxDriver driver;
 
