@@ -32,7 +32,7 @@ namespace TesteSelenium
             var siteTestes = Environment.GetEnvironmentVariable("SiteTestes");
             driver.Navigate().GoToUrl("https://github.com");
 
-            System.Threading.Thread.Sleep(3000);
+            //System.Threading.Thread.Sleep(3000);
             
 
 
