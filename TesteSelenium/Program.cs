@@ -18,18 +18,18 @@ namespace TesteSelenium
             //options.LogLevel = FirefoxDriverLogLevel.Error;
             //options.UnhandledPromptBehavior = UnhandledPromptBehavior.Dismiss;
             
-            options.SetLoggingPreference(LogType.Browser, LogLevel.Off);
+            /*options.SetLoggingPreference(LogType.Browser, LogLevel.Off);
             options.SetLoggingPreference(LogType.Client, LogLevel.Off);
             options.SetLoggingPreference(LogType.Driver, LogLevel.Off);
             options.SetLoggingPreference(LogType.Profiler, LogLevel.Off);
-            options.SetLoggingPreference(LogType.Server, LogLevel.Off);
+            options.SetLoggingPreference(LogType.Server, LogLevel.Off);*/
             
-            /*FirefoxProfile profile = new FirefoxProfile();
+            FirefoxProfile profile = new FirefoxProfile();
             profile.SetPreference("webdriver.log.browser.ignore", true);
             profile.SetPreference("webdriver.log.driver.ignore", true);
             profile.SetPreference("webdriver.log.profiler.ignore", true);
 
-            options.Profile = profile;*/
+            options.Profile = profile;
             
             FirefoxDriver driver;
 
@@ -44,7 +44,8 @@ namespace TesteSelenium
             //driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(60);
 
             var siteTestes = Environment.GetEnvironmentVariable("SiteTestes");
-            driver.Navigate().GoToUrl("https://anp-imagemnasa.azurewebsites.net");
+            //driver.Navigate().GoToUrl("https://anp-imagemnasa.azurewebsites.net");
+            driver.Navigate().GoToUrl("https://www.uol.com.br");
 
             //System.Threading.Thread.Sleep(3000);
             
